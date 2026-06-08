@@ -1,6 +1,5 @@
 body{
     color: black;
-    background-color: red;
     font-family: 'Lucida Sans', 'Lucida Sans Regular';
 }
 /*p{
@@ -10,7 +9,13 @@ body{
 }*/
 img{
     height:500px;
-    width:450px;
+    width:500px;
+}
+@media (max-width:600px){
+    img{
+        height:auto;
+        width:100%;
+    }
 }
 video{
     height:500px;
@@ -23,7 +28,7 @@ ul{
     list-style-type:circle;
 }
 table, th, td{
-    border: 1px solid white;
+    border: 1px solid black;
     border-collapse:collapse;
 }
 h1{
@@ -32,7 +37,7 @@ h1{
     margin:50px;
 }
 button:hover{
-    background-color: green;
+    background-color: aqua;
     border-radius:5px;
 }
 button{
@@ -43,6 +48,13 @@ nav{
     display:flex;
     flex-direction:column;
     gap:100px;
+}
+@media (min-width:1024px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap:100px;
+    }
 }
 #p1{
     font-style: normal;
@@ -56,11 +68,16 @@ nav{
 }
 .grid{
     display:grid;
-    grid-template-columns: 33% 33% 33%;
 }
 .festivals{
     display:grid;
     grid-template-columns: 50% 50%;
+}
+@media (min-width:1024px){
+    .grid{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+    }
 }
 #festival1{
     grid-row:1/2;
